@@ -27,14 +27,14 @@ export default class Diary implements Encodable {
 	 * @param impressionOrContact 感想・連絡事項
 	 */
 	constructor(
-		readonly date: Date,
-		readonly weather: Weather,
-		readonly responsibleStudents: readonly Student[],
-		readonly studies: readonly Study[],
-		readonly eventOrOther: string,
-		readonly cleanResponsibleResearches: readonly Research[],
-		readonly cleanDate: Date,
-		readonly impressionOrContact: string
+		readonly date: Date = new Date(),
+		readonly weather: Weather = '晴れ',
+		readonly responsibleStudents: readonly Student[] = [],
+		readonly studies: readonly Study[] = [],
+		readonly eventOrOther: string = '',
+		readonly cleanResponsibleResearches: readonly Research[] = [],
+		readonly cleanDate: Date = new Date(),
+		readonly impressionOrContact: string = ''
 	) {}
 
 	static readonly decode: Decoder<Diary> = (json) => {
