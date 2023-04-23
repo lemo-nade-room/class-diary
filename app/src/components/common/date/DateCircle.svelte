@@ -10,14 +10,16 @@
 		{ name: '金', class: 'fri' },
 		{ name: '土', class: 'sat' }
 	];
+	$: monthString = date.getMonth() + 1;
+	$: dateString = date.getDate();
 	$: day = DAYS[date.getDay()];
 </script>
 
 <div class="diary-circle {day.class}">
 	<span class="day">{day.name}</span>
-	<span class="number month">{date.getMonth() + 1}</span>
+	<span class="number month">{monthString}</span>
 	<span class="divisor" />
-	<span class="number date">{date.getDate()}</span>
+	<span class="number date">{dateString}</span>
 </div>
 
 <style lang="scss">
