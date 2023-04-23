@@ -17,9 +17,9 @@
 
 <div class="diary-circle {day.class}">
 	<span class="day">{day.name}</span>
-	<span class="number month">{monthString}</span>
+	<span class="number month">{monthNumber}</span>
 	<span class="divisor" />
-	<span class="number date">{dateString}</span>
+	<span class="number date">{dateNumber}</span>
 </div>
 
 <style lang="scss">
