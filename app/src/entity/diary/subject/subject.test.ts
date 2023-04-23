@@ -9,10 +9,4 @@ describe('Subject Tests', () => {
 		});
 		expect(actual).toEqual(expected);
 	});
-
-	test('JSON Array Decode Test', () => {
-		const expected = [new Subject('国語'), new Subject('数学')];
-		const actual = Subject.decodeArray([{ name: '国語' }, { name: '数学' }]);
-		expect(actual).toEqual(expected);
-	});
 });

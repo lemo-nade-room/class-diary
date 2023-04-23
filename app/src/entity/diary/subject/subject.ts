@@ -1,7 +1,7 @@
 import { z } from 'zod';
-import type { Decoder } from '@/entity/util/decode';
-import { decodeArray } from '@/entity/util/decode';
-export default class Subject {
+import type { Decoder } from '@/resources/codable/decode';
+import type Encodable from '@/resources/codable/encode';
+export default class Subject implements Encodable {
 	constructor(readonly name: string) {}
 
 	static readonly decode: Decoder<Subject> = (json) => {
@@ -9,9 +9,9 @@ export default class Subject {
 		return new Subject(schema.name);
 	};
 
-	static readonly decodeArray: Decoder<readonly Subject[]> = (json) => {
-		return decodeArray(json, this.decode);
-	};
+	encode(): unknown {
+		return this;
+	}
 }
 
 export const SubjectSchema = z.object({

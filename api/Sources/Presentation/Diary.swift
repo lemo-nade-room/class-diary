@@ -19,7 +19,7 @@ public struct Diary: Hashable, Equatable, Content {
     var eventOrOther: String
     
     /// 清掃担当研究室
-    var cleanResponsibleReasearches: [Research]
+    var cleanResponsibleResearches: [Research]
     
     // 清掃実施（予定）日
     var cleanDate: Date
@@ -36,7 +36,7 @@ extension Diary {
             日直者: responsibleStudents.entities,
             授業: studies.entities,
             行時・その他: eventOrOther,
-            清掃担当研究室: cleanResponsibleReasearches.entities,
+            清掃担当研究室: cleanResponsibleResearches.entities,
             清掃実施（予定日）: cleanDate,
             感想・連絡事項等: impressionOrContact
         )
@@ -51,7 +51,7 @@ extension Entity.Diary {
             responsibleStudents: 日直者.toJSON,
             studies: 授業.toJSON,
             eventOrOther: 行時・その他,
-            cleanResponsibleReasearches: 清掃担当研究室.toJSON,
+            cleanResponsibleResearches: 清掃担当研究室.toJSON,
             cleanDate: 清掃実施（予定）日,
             impressionOrContact: 感想・連絡事項等
         )

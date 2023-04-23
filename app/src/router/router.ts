@@ -1,9 +1,9 @@
 import type { RouteDefinition } from 'svelte-spa-router';
-import HomeView from '@/views/HomeView.svelte';
+import HomeRoute from '@/routes/HomeRoute.svelte';
 
 const routes: RouteDefinition = {
 	// Exact path
-	'/': HomeView
+	'/': HomeRoute
 };
 
 export default routes;
