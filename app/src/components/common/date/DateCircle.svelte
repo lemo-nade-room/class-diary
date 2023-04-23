@@ -10,8 +10,8 @@
 		{ name: '金', class: 'fri' },
 		{ name: '土', class: 'sat' }
 	];
-	$: monthString = date.getMonth() + 1;
-	$: dateString = date.getDate();
+	$: monthNumber = date.getMonth() + 1;
+	$: dateNumber = date.getDate();
 	$: day = DAYS[date.getDay()];
 </script>
 
