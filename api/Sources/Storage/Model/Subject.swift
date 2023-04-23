@@ -28,6 +28,6 @@ final class Subject: Model {
 extension Subject {
     
     var entity: Entity.Subject {
-        .init(科目名)
+        .init(科目名: 科目名)
     }
 }

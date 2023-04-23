@@ -30,7 +30,7 @@ final class Research: Model {
 
 extension Research {
     var entity: Entity.Research {
-        .init(指導教員名)
+        .init(指導教員名: 指導教員名)
     }
 }
 

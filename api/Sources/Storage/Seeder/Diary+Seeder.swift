@@ -48,54 +48,54 @@ extension Diary {
         
         static let `default`: [Entity.Diary] = [
             Entity.Diary(
-                Date(timeIntervalSince1970: 0),
-                .晴れ,
-                Array(Student.Seeder.default[0...1]),
-                [
+                日付: Date(timeIntervalSince1970: 0),
+                天候: .晴れ,
+                日直者: Array(Student.Seeder.default[0...1]),
+                授業: [
                     .init(
-                        [.一時限目, .二時限目],
-                        Subject.Seeder.default[0],
-                        [.init(1, "学生A"), .init(2, "学生B")],
-                        "漢字テスト"
+                        授業時限: [.一時限目, .二時限目],
+                        科目: Subject.Seeder.default[0],
+                        欠席者一覧: [.init(出席番号: 1, 氏名: "学生A"), .init(出席番号: 2, 氏名: "学生B")],
+                        備考: "漢字テスト"
                     ),
                     Entity.Study(
-                        [.三時限目, .四時限目],
-                        Subject.Seeder.default[1],
-                        [.init(3, "学生C")],
-                        "数学テスト"
+                        授業時限: [.三時限目, .四時限目],
+                        科目: Subject.Seeder.default[1],
+                        欠席者一覧: [.init(出席番号: 3, 氏名: "学生C")],
+                        備考: "数学テスト"
                     )
                 ],
-                "特になし",
-                Array(Research.Seeder.default[0...1]),
-                Date(timeIntervalSince1970: 3 * 24 * 60 * 60),
-                "寒かった"
+                行時・その他: "特になし",
+                清掃担当研究室: Array(Research.Seeder.default[0...1]),
+                清掃実施（予定日）: Date(timeIntervalSince1970: 3 * 24 * 60 * 60),
+                感想・連絡事項等: "寒かった"
             ),
             Entity.Diary(
-                Date(timeIntervalSince1970: 1 * 24 * 60 * 60),
-                .雨,
-                [Student.Seeder.default[2]],
-                [
+                日付: Date(timeIntervalSince1970: 1 * 24 * 60 * 60),
+                天候: .雨,
+                日直者: [Student.Seeder.default[2]],
+                授業: [
                     .init(
-                        [.一時限目, .二時限目],
-                        Subject.Seeder.default[2],
-                        [],
-                        "英語テスト"
+                        授業時限: [.一時限目, .二時限目],
+                        科目: Subject.Seeder.default[2],
+                        欠席者一覧: [],
+                        備考: "英語テスト"
                     )
                 ],
-                "体育大会",
-                [Research.Seeder.default[2]],
-                Date(timeIntervalSince1970: 3 * 24 * 60 * 60),
-                "少し寒かった"
+                行時・その他: "体育大会",
+                清掃担当研究室: [Research.Seeder.default[2]],
+                清掃実施（予定日）: Date(timeIntervalSince1970: 3 * 24 * 60 * 60),
+                感想・連絡事項等: "少し寒かった"
             ),
             Entity.Diary(
-                Date(timeIntervalSince1970: 2 * 24 * 60 * 60),
-                .雪,
-                [],
-                [],
-                "高専祭",
-                [],
-                Date(timeIntervalSince1970: 3 * 24 * 60 * 60),
-                "超寒かった"
+                日付: Date(timeIntervalSince1970: 2 * 24 * 60 * 60),
+                天候: .雪,
+                日直者: [],
+                授業: [],
+                行時・その他: "高専祭",
+                清掃担当研究室: [],
+                清掃実施（予定日）: Date(timeIntervalSince1970: 3 * 24 * 60 * 60),
+                感想・連絡事項等: "超寒かった"
             )
         ]
     }

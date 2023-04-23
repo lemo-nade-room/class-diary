@@ -26,9 +26,9 @@ extension Research {
         }
         
         static let `default` = [
-            Entity.Research("研究室A"),
-            Entity.Research("研究室B"),
-            Entity.Research("研究室C"),
+            Entity.Research(指導教員名: "研究室A"),
+            Entity.Research(指導教員名: "研究室B"),
+            Entity.Research(指導教員名: "研究室C"),
         ]
     }
 }

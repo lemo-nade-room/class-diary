@@ -26,9 +26,9 @@ extension Subject {
         }
         
         static let `default` = [
-            Entity.Subject("科目A"),
-            Entity.Subject("科目B"),
-            Entity.Subject("科目C"),
+            Entity.Subject(科目名: "科目A"),
+            Entity.Subject(科目名: "科目B"),
+            Entity.Subject(科目名: "科目C"),
         ]
     }
 }

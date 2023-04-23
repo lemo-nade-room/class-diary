@@ -19,7 +19,11 @@ let package = Package(
                 .product(name: "Fluent", package: "fluent"),
                 .product(name: "FluentPostgresDriver", package: "fluent-postgres-driver"),
                 .product(name: "Vapor", package: "vapor"),
+                .target(name: "Provider"),
+                .target(name: "Presentation"),
+                .target(name: "Service"),
                 .target(name: "Storage"),
+                .target(name: "Usecase"),
                 .target(name: "Entity"),
             ],
             swiftSettings: [
@@ -30,14 +34,44 @@ let package = Package(
             ]
         ),
         
+        
+        .target(name: "Provider", dependencies: [
+            .target(name: "Service"),
+            .target(name: "Repository"),
+            .target(name: "Storage"),
+            .target(name: "Usecase"),
+            .target(name: "Entity"),
+            .product(name: "Vapor", package: "vapor"),
+        ]),
+        
+        .target(name: "Presentation", dependencies: [
+            .target(name: "Entity"),
+            .target(name: "Usecase"),
+            .product(name: "Vapor", package: "vapor"),
+        ]),
+        .testTarget(name: "PresentationTests", dependencies: [
+            .target(name: "Presentation"),
+        ]),
+            
+            
+        .target(name: "Service", dependencies: [
+            .target(name: "Entity"),
+            .target(name: "Usecase"),
+            .target(name: "Repository"),
+        ]),
+        .testTarget(name: "ServiceTests", dependencies: [
+            .target(name: "Service"),
+        ]),
+        
         .target(name: "Repository", dependencies: [
             .target(name: "Usecase"),
-            .target(name: "Entity")
+            .target(name: "Entity"),
         ]),
         
         .target(name: "Storage", dependencies: [
             .target(name: "Entity"),
             .target(name: "Usecase"),
+            .target(name: "Repository"),
             .product(name: "Fluent", package: "fluent"),
         ]),
         .testTarget(name: "StorageTests", dependencies: [

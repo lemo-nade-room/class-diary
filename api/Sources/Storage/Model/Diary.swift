@@ -65,14 +65,14 @@ final class Diary: Model {
 extension Diary {
     var entity: Entity.Diary {
         .init(
-            日付,
-            天候,
-            self.$担当者.value.map({ $0.entities }) ?? [],
-            $授業.value.map { $0.entities } ?? [],
-            行時・その他,
-            $清掃担当研究室.value.map({ $0.entities }) ?? [],
-            清掃実施（予定日）,
-            感想・連絡事項等
+            日付: 日付,
+            天候: 天候,
+            日直者: self.$担当者.value.map({ $0.entities }) ?? [],
+            授業: $授業.value.map { $0.entities } ?? [],
+            行時・その他: 行時・その他,
+            清掃担当研究室: $清掃担当研究室.value.map({ $0.entities }) ?? [],
+            清掃実施（予定日）: 清掃実施（予定日）,
+            感想・連絡事項等: 感想・連絡事項等
         )
     }
 }

@@ -11,10 +11,10 @@ public struct Study: Hashable, Equatable {
     public var 備考: String
     
     public init(
-        _ 授業時限: [Period],
-        _ 科目: Subject,
-        _ 欠席者一覧: [Student],
-        _ 備考: String
+        授業時限: [Period],
+        科目: Subject,
+        欠席者一覧: [Student],
+        備考: String
     ) {
         self.授業時限 = 授業時限
         self.科目 = 科目

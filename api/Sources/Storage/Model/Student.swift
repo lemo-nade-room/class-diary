@@ -37,7 +37,7 @@ final class Student: Model {
 
 extension Student {
     var entity: Entity.Student {
-        .init(出席番号, 氏名)
+        .init(出席番号: 出席番号, 氏名: 氏名)
     }
 }
 

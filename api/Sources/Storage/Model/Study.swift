@@ -50,10 +50,10 @@ extension Study {
     
     var entity: Entity.Study {
         .init(
-            授業時限.compactMap({ Period(rawValue: $0) }),
-            $科目.value.map({ $0.entity }) ?? .init(""),
-            $欠課学生.value.map({ $0.entities }) ?? [],
-            備考
+            授業時限: 授業時限.compactMap({ Period(rawValue: $0) }),
+            科目: $科目.value.map({ $0.entity }) ?? .init(科目名: ""),
+            欠席者一覧: $欠課学生.value.map({ $0.entities }) ?? [],
+            備考: 備考
         )
     }
 }

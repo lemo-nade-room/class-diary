@@ -26,9 +26,9 @@ extension Student {
         }
         
         static let `default` = [
-            Entity.Student(1, "学生A"),
-            Entity.Student(2, "学生B"),
-            Entity.Student(3, "学生C"),
+            Entity.Student(出席番号: 1, 氏名: "学生A"),
+            Entity.Student(出席番号: 2, 氏名: "学生B"),
+            Entity.Student(出席番号: 3, 氏名: "学生C"),
         ]
     }
 }
