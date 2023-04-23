@@ -112,7 +112,5 @@
 				color: #8d7676;
 			}
 		}
-
-		background-color: #f3e458;
 	}
 </style>
